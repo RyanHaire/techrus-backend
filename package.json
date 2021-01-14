@@ -14,8 +14,7 @@
     "client": "npm run start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node seeder.js",
-    "data:destroy": "node seeder.js -d",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "data:destroy": "node seeder.js -d"
   },
   "author": "Ryan Haire",
   "license": "ISC",
