@@ -9,9 +9,14 @@ import Product from '../models/productModel.js'
 // @route GET /api/products
 // @access Public
 router.get('/', asyncHandler( async (req, res) => {
+    try {
     const products = await Product.find()
-    res.json(products)
     
+    res.json(products)
+    } catch (error) {
+        console.log('error = ' + error)
+    }
+
 }))
 
 // @desc Fetch single product
