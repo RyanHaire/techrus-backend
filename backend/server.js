@@ -6,7 +6,7 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import path from 'path'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
-import cors from 'cors'
+//import cors from 'cors'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -19,7 +19,7 @@ connectDB()
 
 const app = express()
 
-app.use(cors('*'))
+//app.use(cors('*'))
 
 
 
