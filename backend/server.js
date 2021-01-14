@@ -6,6 +6,7 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import path from 'path'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
+import cors from 'cors'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -18,8 +19,11 @@ connectDB()
 
 const app = express()
 
+app.use(cors('*'))
+
 if(process.env.NODE_ENV == 'production') {
     app.use(express.static(path.join(__dirname, 'frontend/build')))
+    console.log('hello world')
 }
 
 // app.get('/', (req, res) => {
