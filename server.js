@@ -4,11 +4,11 @@ import colors from 'colors'
 import connectDB from './config/db.js'
 import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import path from 'path'
-import { dirname } from 'path'
-import { fileURLToPath } from 'url'
+// import { dirname } from 'path'
+// import { fileURLToPath } from 'url'
 //import cors from 'cors'
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
+//const __dirname = dirname(fileURLToPath(import.meta.url))
 
 import productRoutes from './routes/productRoutes.js'
 
@@ -18,14 +18,6 @@ dotenv.config()
 connectDB()
 
 const app = express()
-
-//app.use(cors('*'))
-
-
-
-// app.get('/', (req, res) => {
-//     res.send('API is running')
-// })
 
 app.use('/api/products', productRoutes)
 
