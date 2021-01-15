@@ -12,6 +12,7 @@ Dependencies
 Build/Deploy Instructions
 - clone repo
 - npm install
+- npm run data:import
 - npm start
 
 Frontend Heroku App 
