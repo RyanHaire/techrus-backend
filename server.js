@@ -27,15 +27,4 @@ app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
 
-// "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
-
-if (process.env.NODE_ENV === "production") {
-    console.log("__dirname=" + __dirname)
-    app.use(express.static(__dirname + "/frontend/build"));
-
-    app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname+"/frontend/build/index.html"));
-    });
-}
-
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold))
