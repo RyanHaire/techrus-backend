@@ -1,17 +1,25 @@
 Apps Purpose
-- It is an eccommerce website for a variety of items
+- It is the backend of an eccommerce website for a variety of items
 
 Major Functions
-- you can browse products
-- you can view products
-- you can add products to shopping cart
-- you can delete products from shopping cart
+- provided the products through /api/products route
 
 Dependencies
 - MongoDB
 - NodeJS
+- NPM
 
 Build/Deploy Instructions
 - clone repo
 - npm install
-- npm run dev (the app will seed the data into the database)
+- npm run data:import
+- npm start
+
+Frontend Heroku App 
+- https://techrus.herokuapp.com/
+
+Backend Heroku App 
+- https://techrus-backend.herokuapp.com/api/products
+
+Frontend Repo 
+- https://github.com/RyanHaire/techrus/
